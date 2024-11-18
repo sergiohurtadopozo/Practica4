@@ -8,7 +8,7 @@ header {
   background-color: #961010;
   padding: 1rem;
   display: flex;
-  justify-content: space-around;
+  gap: 400px;
 }
 
 .menu {
@@ -59,11 +59,11 @@ news-viewer {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: transform 0.2s ease; /* Add a hover effect */
+  transition: transform 0.2s ease; 
 }
 
 .article:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
+  transform: translateY(-5px); 
 }
 
 .article h3 {
