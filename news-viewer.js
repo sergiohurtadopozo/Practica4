@@ -34,7 +34,7 @@ class NewsViewer extends HTMLElement {
   
     renderArticles(articles) {
       const template = document.getElementById('article-template');
-      this.innerHTML = ''; // Limpiar contenido existente
+      this.innerHTML = '';
   
       articles.forEach(article => {
         const articleContent = document.importNode(template.content, true);
@@ -42,7 +42,7 @@ class NewsViewer extends HTMLElement {
         articleContent.querySelector('.author').textContent = article.author;
         articleContent.querySelector('.description').innerHTML = article.body;
         
-        // Añadir evento de clic para ver detalles
+       
         articleContent.querySelector('.view-article').addEventListener('click', () => {
           localStorage.setItem('selectedArticle', JSON.stringify(article));
           window.location.href = 'article.html';
@@ -59,7 +59,7 @@ class NewsViewer extends HTMLElement {
     const categoryButton = document.getElementById("category-button");
     const categoryPopover = document.getElementById("category-popover");
   
-    // Mostrar/ocultar el popover al hacer clic en el botón
+    
     categoryButton.addEventListener("click", () => {
       const isHidden = categoryPopover.classList.contains("hidden");
       if (isHidden) {
@@ -71,7 +71,7 @@ class NewsViewer extends HTMLElement {
       }
     });
   
-    // Ocultar el popover si el usuario hace clic fuera de él
+   
     document.addEventListener("click", (event) => {
       if (!categoryPopover.contains(event.target) && event.target !== categoryButton) {
         categoryPopover.classList.add("hidden");
