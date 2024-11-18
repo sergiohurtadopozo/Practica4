@@ -42,7 +42,7 @@ news-viewer {
   gap: 30px;
   padding: 20px;
   justify-content: center;
-  max-width: 1200px; /* Center content on large screens */
+  max-width: 1200px; 
   margin: 0 auto;
 }
 
@@ -85,7 +85,7 @@ news-viewer {
 .view-article:hover {
   background-color: #0056b3;
 }
-/* Popover para categorías */
+
 #category-popover {
   position: absolute;
   top: 50px;
@@ -96,7 +96,7 @@ news-viewer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
   z-index: 1000;
-  display: none; /* Oculto por defecto */
+  display: none; 
 }
 
 #category-popover.hidden {
