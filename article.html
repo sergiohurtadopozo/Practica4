@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Artículo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="article-detail">
+    <h1 class="title"></h1>
+    <p><strong>Autor:</strong> <span class="author"></span></p>
+    <p class="description"></p>
+  </div>
+
+  <script>
+   
+    const selectedArticle = JSON.parse(localStorage.getItem('selectedArticle'));
+
+    if (selectedArticle) {
+      document.querySelector('.title').textContent = selectedArticle.headline;
+      document.querySelector('.author').textContent = selectedArticle.author;
+      document.querySelector('.description').innerHTML = selectedArticle.body;
+    } else {
+      document.getElementById('article-detail').innerHTML = "<p>Error al cargar el artículo.</p>";
+    }
+  </script>
+</body>
+</html>

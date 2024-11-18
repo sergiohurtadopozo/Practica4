@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #961010;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background-color: #555;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+news-viewer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ; 
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  max-width: 1200px; /* Center content on large screens */
+  margin: 0 auto;
+}
+
+.article {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+.article .clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: transform 0.2s ease; /* Add a hover effect */
+}
+
+.article:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.article h3 {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.view-article {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-article:hover {
+  background-color: #0056b3;
+}
+/* Popover para categorías */
+#category-popover {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  display: none; /* Oculto por defecto */
+}
+
+#category-popover.hidden {
+  display: none;
+}
+
+#category-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#category-button:hover {
+  background-color: #0056b3;
+}
+
+#category-popover ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#category-popover li {
+  margin: 5px 0;
+}
+
+#category-popover a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#category-popover a:hover {
+  text-decoration: underline;
+}
+
